@@ -1,0 +1,6 @@
+/.settings/com.gwtplugins.gwt.eclipse.core.prefs
+/gwt-unitCache/*
+/war/WEB-INF/*
+/war/course_load_scheduler/*
+.classpath
+.gwt/.gwt-log

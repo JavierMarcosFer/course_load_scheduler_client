@@ -1,0 +1,80 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style>
+
+			.login-button
+	{
+		font-family:Times New Roman;
+		font-size:14px;
+	}
+
+			.layoutPanel
+	{
+		background-color:#DCDCDC;
+	}
+
+
+	</ui:style>
+	<g:HTMLPanel ui:field="rootPanel" width="100%" height="100%">
+		<g:LayoutPanel width="100%" height="100%" ui:field="AccountInfoBaseLayoutPanel">
+			<g:layer top="0.0pct" bottom="90.0pct" left="0.0pct" right="0.0pct">
+				<g:TextBox text="Account Information" width="100%" ui:field="AccountInfoPgTitle" height="100%" readOnly="true" alignment="CENTER"/>
+			</g:layer>
+			<g:layer left="0.0pct" right="0.0pct" top="10.0pct" bottom="10.0pct">
+				<g:VerticalPanel width="100%" height="100%" ui:field="mainPanel">
+					<g:HorizontalPanel width="100%" height="100%">
+						<g:Cell verticalAlignment="ALIGN_MIDDLE" width="25%">
+							<g:Label text="First Name" height="100%" width="100%" horizontalAlignment="ALIGN_CENTER"/>
+						</g:Cell>
+						<g:Cell width="25%" height="100%">
+							<g:TextBox height="100%" width="100%" ui:field="firstName" text="Daniel" readOnly="true"/>
+						</g:Cell>
+						<g:Cell verticalAlignment="ALIGN_MIDDLE" width="25%">
+							<g:Label text="Last Name" width="100%" height="100%" horizontalAlignment="ALIGN_CENTER"/>
+						</g:Cell>
+						<g:Cell width="25%" height="100%">
+							<g:TextBox height="100%" width="100%" ui:field="lastName" text="DiIorio" readOnly="true"/>
+						</g:Cell>
+					</g:HorizontalPanel>
+					<g:Cell width="25%">
+						<g:HorizontalPanel height="100%" width="100%" horizontalAlignment="ALIGN_CENTER">
+						<g:Cell verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="ALIGN_CENTER" width="25%">
+							<g:Label text="Change Password to:" height="100%" width="100%" horizontalAlignment="ALIGN_CENTER"/>
+						</g:Cell>
+						<g:Cell width="25%" height="100%">
+							<g:PasswordTextBox width="100%" height="100%" ui:field="changePassword"/>
+						</g:Cell>
+						<g:Label text="Current Password:"/>
+						<g:Cell width="25%" height="100%">
+							<g:PasswordTextBox width="100%" height="100%" text="******************" ui:field="currentPassword"/>
+						</g:Cell>
+					</g:HorizontalPanel>
+					</g:Cell>
+					<g:HorizontalPanel height="100%" width="100%">
+						<g:Cell width="50%">
+							<g:Label text="Course Requirements (Number of courses)" height="100%" width="100%" horizontalAlignment="ALIGN_CENTER"/>
+						</g:Cell>
+						<g:TextBox text="0" width="100%" height="100%" ui:field="courseReq"/>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel width="100%" height="100%">
+						<g:Cell width="50%">
+							<g:Label text="Phone Number" width="100%" height="100%" horizontalAlignment="ALIGN_CENTER"/>
+						</g:Cell>
+						<g:TextBox height="100%" width="100%" text="1(978)663-8390" ui:field="phoneNum"/>
+					</g:HorizontalPanel>
+					<g:HorizontalPanel width="100%" height="100%">
+						<g:Cell width="50%">
+							<g:Label text="Preferred Email" height="100%" width="100%" horizontalAlignment="ALIGN_CENTER"/>
+						</g:Cell>
+						<g:TextBox width="100%" height="100%" text="drdiiorio@wpi.edu" ui:field="emai" visibleLength="30"/>
+					</g:HorizontalPanel>
+				</g:VerticalPanel>
+			</g:layer>
+			<g:layer left="0.0pct" right="0.0pct" top="90.0pct" bottom="0.0pct">
+				<g:Button width="100%" height="100%" ui:field="submitChangesButton" text="Submit Changes"/>
+			</g:layer>
+		</g:LayoutPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

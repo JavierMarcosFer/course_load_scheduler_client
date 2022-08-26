@@ -1,0 +1,158 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+
+	.tableHeader{
+		background: #989b9b;
+		color:#ffffff;
+		font-weight:bold;
+	}
+
+	.layoutPanel{
+		background-color:#DCDCDC;
+	}
+
+	.layoutPanelB{
+		background-color:#C1C1C1;
+	}
+
+	.whiteButton{
+		color: black;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background:#eaecef;
+	}
+
+	.greenButton{
+		color: white;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background: #06c94a;
+	}
+
+	.redButton{
+		color: white;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background:#d13506;
+	}
+
+	.orangeButton{
+		color: white;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background: #fcb605;
+	}
+
+	</ui:style>
+	<g:HTMLPanel ui:field = "rootPanel">
+		<g:DockLayoutPanel unit="PCT" width="100%" height="100%">
+			<g:north size="24.0">
+					<g:LayoutPanel width="100%" height="100%" ui:field="sectionInfoPanel" styleName="{style.layoutPanelB}">
+					
+						<g:layer left="20.0pct" top="15.0pct" bottom="48.0pct" right="60.0pct">
+							<g:TextBox width="100%" height="100%" text="Course Num" ui:field="courseNumberHeader" styleName="{style.tableHeader}" readOnly="true"/>
+						</g:layer>
+						<g:layer left="40.0pct" top="15.0pct" bottom="48.0pct" right="40.0pct">
+							<g:TextBox width="100%" height="100%" text="Instance No" ui:field="instanceNumberHeader" styleName="{style.tableHeader}" readOnly="true"/>
+						</g:layer>
+						<g:layer left="60.0pct" top="15.0pct" bottom="48.0pct" right="20.0pct">
+							<g:TextBox width="100%" height="100%" text="Section No" ui:field="sectionNumberHeader" styleName="{style.tableHeader}" readOnly="true"/>
+						</g:layer>
+						
+						<g:layer left="20.0pct" top="50.0pct" bottom="15.0pct" right="60.0pct">
+							<g:TextBox width="100%" height="100%" ui:field="courseNumberField" readOnly="true"/>
+						</g:layer>
+						<g:layer left="40.0pct" top="50.0pct" bottom="15.0pct" right="40.0pct">
+							<g:IntegerBox width="100%" height="100%" ui:field="instanceNumberField" readOnly="true"/>
+						</g:layer>
+						<g:layer left="60.0pct" top="50.0pct" right="20.0pct" bottom="15.0pct">
+							<g:IntegerBox width="100%" height="100%" ui:field="sectionNumberField" readOnly="true"/>
+						</g:layer>
+					</g:LayoutPanel>
+				</g:north>
+				
+				<g:south size="20.0">
+					<g:LayoutPanel width="100%" height="100%" styleName="{style.layoutPanelB}" ui:field="saveDeletePanel">
+						<g:layer left="40%" top="20%" bottom="20.0pct" right="33.0pct">
+							<g:Button text="Save Changes" styleName="{style.greenButton}" ui:field="saveButton" width="100%" height="100%"/>
+						</g:layer>
+						<g:layer left="5%" top="20%" right="70.0pct" bottom="20.0pct">
+							<g:Button text="Back" ui:field="backButton" styleName="{style.whiteButton}" width="100%" height="100%"/>
+						</g:layer>
+						<g:layer left="70%" top="20%" bottom="20.0pct" right="6.0pct">
+							<g:Button text="Delete Instance" styleName="{style.redButton}" ui:field="deleteButton" width="100%" height="100%"/>
+						</g:layer>
+					
+					</g:LayoutPanel>
+				</g:south>
+				
+				<g:center>
+					<g:LayoutPanel width="100%" height="100%" styleName="{style.layoutPanel}" ui:field="detailsPanel">
+						<g:layer left="5.0pct" top="15.0pct" bottom="70.0pct" right="60.0pct">
+							<g:TextBox width="100%" height="100%" text="Expected Population" ui:field="expectedPopHeader" styleName="{style.tableHeader}" readOnly="true"/>
+						</g:layer>
+						<g:layer left="5.0pct" top="30.0pct" right="60.0pct" bottom="55.0pct">
+							<g:IntegerBox width="100%" height="100%" ui:field="expectedPopField" enabled="true"/>
+						</g:layer>
+						
+						<g:layer left="5.0pct" top="55.0pct" right="60.0pct" bottom="30.0pct">
+							<g:TextBox width="100%" height="100%" text="Type" ui:field="typeHeader" styleName="{style.tableHeader}" readOnly="true"/>
+						</g:layer>
+						<g:layer left="5.0pct" top="70.0pct" right="60.0pct" bottom="15.0pct">
+							<g:TextBox width="100%" height="100%" ui:field="typeField" enabled="true"/>
+						</g:layer>
+						
+						<g:layer left="50.0pct" top="15.0pct" bottom="70.0pct" right="7.0pct">
+							<g:TextBox width="100%" height="100%" text="Days" ui:field="daysHeader" styleName="{style.tableHeader}" alignment="CENTER" readOnly="true"/>
+						</g:layer>
+						<g:layer left="51.0pct" top="30.0pct" right="40.0pct" bottom="55.4pct">
+							<g:CheckBox text="M" ui:field="mondayCheck" width="100%"/>
+						</g:layer>
+						<g:layer left="59.0pct" top="30.0pct" right="35.0pct" bottom="55.4pct">
+							<g:CheckBox text="T" ui:field="tuesdayCheck" width="100%" height="100%"/>
+						</g:layer>
+						<g:layer left="67.0pct" top="30.0pct" right="25.0pct" bottom="55.4pct">
+							<g:CheckBox text="W" ui:field="wednesdayCheck" width="100%" height="100%"/>
+						</g:layer>
+						<g:layer left="75.0pct" top="30.0pct" right="17.0pct" bottom="55.4pct">
+							<g:CheckBox text="R" ui:field="thursdayCheck" width="100%" height="100%"/>
+						</g:layer>
+						<g:layer left="83.0pct" top="30.0pct" bottom="55.4pct" right="10.0pct">
+							<g:CheckBox text="F" ui:field="fridayCheck" width="100%" height="100%"/>
+						</g:layer>
+						
+						<g:layer left="50.0pct" top="55.0pct" bottom="32.0pct" right="32.0pct">
+							<g:TextBox width="100%" height="100%" text="Time Start" ui:field="timeStartHeader" styleName="{style.tableHeader}" readOnly="true"/>
+						</g:layer>
+						<g:layer left="50.0pct" top="70.0pct" bottom="15.0pct" right="44.0pct">
+							<g:IntegerBox width="100%" height="100%" ui:field="startHoursField" enabled="true" maxLength="2"/>
+						</g:layer>
+						<g:layer left="60.0pct" top="70.0pct" bottom="15.0pct" right="33.5pct">
+							<g:IntegerBox width="100%" height="100%" ui:field="startMinutesField" enabled="true" maxLength="2"/>
+						</g:layer>
+						<g:layer left="57.0pct" top="70.0pct" bottom="15.5pct" right="40.0pct">
+							<g:Label text=":" styleName="hourText" ui:field="timeStartSeparator" width="100%" height="100%"/>
+						</g:layer>
+						
+						<g:layer left="74.0pct" top="55.0pct" right="7.0pct" bottom="32.0pct">
+							<g:TextBox width="100%" height="100%" text="Time End" ui:field="timeEndHeader" styleName="{style.tableHeader}" readOnly="true"/>
+						</g:layer>
+						<g:layer left="75.0pct" top="70.0pct" bottom="15.0pct" right="19.0pct">
+							<g:IntegerBox width="100%" height="100%" ui:field="endHoursField" enabled="true" maxLength="2"/>
+						</g:layer>
+						<g:layer left="85.0pct" top="70.0pct" bottom="15.0pct" right="8.5pct">
+							<g:IntegerBox width="100%" height="100%" ui:field="endMinutesField" enabled="true" maxLength="2"/>
+						</g:layer>
+						<g:layer left="82.0pct" top="70.0pct" bottom="15.5pct" right="14.0pct">
+							<g:Label text=":" styleName="hourText" ui:field="timeEndSeparator" width="100%" height="100%"/>
+						</g:layer>
+					</g:LayoutPanel>
+				</g:center>
+			</g:DockLayoutPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

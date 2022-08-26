@@ -1,0 +1,79 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+
+		.view-label
+	{
+		font-family: Times New Roman;
+		font-size: 24px;
+		font-weight: bold;
+		background: #DCDCDC;
+	}
+
+.panel-grey {
+		background: #DCDCDC;
+		}
+
+.button-green {
+		color: white;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background: #06c94a;
+		}
+
+.whiteButton{
+		color: black;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background:#eaecef;
+		}
+
+	</ui:style>
+	<g:HTMLPanel width="100%" height="100%" ui:field="rootPanel">
+		<g:LayoutPanel width="100%" height="100%" ui:field="LayoutPanel" styleName="{style.panel-grey}">
+			<g:layer left="3.0pct" bottom="5.0pct" top="84.9pct" right="60.0pct" styleName="{style.panel-grey}">
+				<g:Button ui:field="returnToSearchButton" width="100%" height="100%" styleName="{style.whiteButton}">Return to Search</g:Button>
+			</g:layer>
+			<g:layer bottom="22.0pct" right="10.0pct" left="2.5pct" top="53.0pct">
+				<g:TextBox text="Course Description" ui:field="description" textAlignment="ALIGN_LEFT" direction="LTR" alignment="LEFT" visibleLength="2000" width="100%" height="100%"/>
+			</g:layer>
+			<g:layer left="60.0pct" bottom="5.0pct" right="3.0pct" top="84.9pct">
+				<g:Button ui:field="submitToCartButton" styleName="{style.button-green}" width="100%" height="100%">Submit to Cart</g:Button>
+			</g:layer>
+			<g:layer left="3.0pct" top="15.0pct" bottom="80.1pct" right="65.0pct">
+				<g:Label text="Course Name:" width="100%" height="100%" horizontalAlignment="ALIGN_LEFT"/>
+			</g:layer>
+			<g:layer left="3.0pct" top="22.0pct" bottom="73.2pct" right="65.0pct">
+				<g:Label text="Course Number:" horizontalAlignment="ALIGN_LEFT"/>
+			</g:layer>
+			<g:layer left="3.0pct" top="29.0pct" bottom="66.2pct" right="65.0pct">
+				<g:Label text="Level:" horizontalAlignment="ALIGN_LEFT"/>
+			</g:layer>
+			<g:layer left="3.0pct" top="36.0pct" bottom="59.2pct" right="65.0pct">
+				<g:Label text="Expected Population:" horizontalAlignment="ALIGN_LEFT"/>
+			</g:layer>
+			<g:layer left="3.0pct" top="43.0pct" right="65.0pct" bottom="52.1pct">
+				<g:Label text="Meeting Days:"/>
+			</g:layer>
+			<g:layer left="20.0pct" right="20.0pct" top="2.0pct" bottom="90.0pct">
+				<g:Label text="Course Details" horizontalAlignment="ALIGN_CENTER" addStyleNames="{style.view-label}" width="100%" height="100%"/>
+			</g:layer>
+			<g:layer left="35.0pct" top="15.0pct" bottom="80.0pct" right="10.0pct">
+				<g:TextBox ui:field="courseName" width="100%" height="28"/>
+			</g:layer>
+			<g:layer left="35.0pct" top="22.0pct" bottom="73.2pct" right="10.0pct">
+				<g:TextBox ui:field="courseNumber" width="100%" height="28"/>
+			</g:layer>
+			<g:layer left="35.0pct" top="29.0pct" bottom="66.2pct" right="10.0pct">
+				<g:TextBox ui:field="level" width="100%"/>
+			</g:layer>
+			<g:layer left="35.0pct" top="36.0pct" right="10.0pct" bottom="59.2pct">
+				<g:IntegerBox ui:field="expectedPopulation" width="100%"/>
+			</g:layer>
+			<g:layer left="35.0pct" top="43.0pct" bottom="52.1pct" right="10.0pct">
+				<g:TextBox ui:field="meetingDays" width="100%"/>
+			</g:layer>
+		</g:LayoutPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

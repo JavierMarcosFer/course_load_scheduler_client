@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.button-green {
+		color: white;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background: #06c94a;
+		}
+
+.panel-grey {
+		background: #DCDCDC;
+		}
+	</ui:style>
+	<g:HTMLPanel ui:field="rootPanel" width="100%" height="100%">
+		<g:LayoutPanel width="100%" height="100%" ui:field="layoutPanel" styleName="{style.panel-grey}">
+			<g:layer left="3.0pct" top="3.0pct" right="6.0pct" bottom="87.0pct">
+				<g:Label text="Report A Problem" ui:field="titleLabel" width="100%" height="100%" horizontalAlignment="ALIGN_CENTER"/>
+			</g:layer>
+			<g:layer left="3.0pct" top="12.0pct" bottom="82.0pct" right="60.0pct">
+				<g:ListBox name="Type Of Problem (Required)" ui:field="typeList" width="100%" height="100%"/>
+			</g:layer>
+			<g:layer left="3.0pct" top="20.0pct" right="4.5pct" bottom="71.0pct">
+				<g:TextBox text="Name (Optional)" ui:field="nameBox" width="100%"/>
+			</g:layer>
+			<g:layer top="30.0pct" right="4.5pct" left="3.0pct" bottom="63.0pct">
+				<g:TextBox text="Email (Optional)" ui:field="emailBox" width="100%"/>
+			</g:layer>
+			<g:layer left="3.0pct" top="39.8pct" right="4.5pct" bottom="18.3pct">
+				<g:TextArea name="description" ui:field="descriptionArea" width="100%"/>
+			</g:layer>
+			<g:layer left="35.0pct" top="85.0pct" right="35.0pct" bottom="3.0pct">
+				<g:Button ui:field="submitButton" width="100%" height="100%" styleName="{style.button-green}">Submit</g:Button>
+			</g:layer>
+		</g:LayoutPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

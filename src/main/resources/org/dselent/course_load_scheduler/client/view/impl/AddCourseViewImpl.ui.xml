@@ -1,0 +1,169 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.tableHeader{
+		background:#DCDCDC;
+		color:#ffffff;
+		font-weight:bold;
+		}
+
+		.layoutPanel{
+		background-color:#DCDCDC;
+		}
+
+		.layoutPanelB{
+		background-color:#C1C1C1;
+		}
+
+		.greenButton{
+		color: white;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background:
+		#06c94a;
+		}
+
+		.redButton{
+		color: white;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background:#d13506;
+		}
+
+		.orangeButton{
+		color: white;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background: #fcb605;
+		}
+
+		.panel-greydark {
+		background: #989b9b;
+		}
+
+	</ui:style>
+	<g:HTMLPanel ui:field="rootPanel">
+		<g:DockLayoutPanel width="100%" height="100%" unit="PCT">
+			<g:north size="35.0">
+				<g:LayoutPanel width="100%" height="95%" ui:field="courseInfoPanel"
+					styleName="{style.layoutPanelB}">
+					<g:layer left="2.0pct" top="5.0pct" bottom="70.0pct" right="1.0pct">
+						<g:TextBox width="100%" height="100%" text="Course name"
+							ui:field="courseNameHeader" styleName="{style.panel-greydark}"
+							readOnly="true" name="0" />
+					</g:layer>
+					<g:layer left="2.0pct" top="51.0pct" bottom="26.0pct" right="75.0pct">
+						<g:TextBox height="100%" text="Course Number" width="100%"
+							ui:field="courseNumberHeader" styleName="{style.panel-greydark}"
+							readOnly="true" />
+					</g:layer>
+					<g:layer left="25.0pct" top="51.0pct" bottom="26.0pct" right="48.0pct">
+						<g:TextBox height="100%" text="Type" width="100%"
+							ui:field="typeHeader" styleName="{style.panel-greydark}"
+							readOnly="true" />
+					</g:layer>
+					<g:layer left="52.0pct" top="51.0pct" bottom="26.0pct" right="25.0pct">
+						<g:TextBox height="100%" text="Level" width="100%"
+							ui:field="levelHeader" styleName="{style.panel-greydark}"
+							readOnly="true" />
+					</g:layer>
+					<g:layer left="75.0pct" top="51.0pct" bottom="26.0pct" right="1.0pct">
+						<g:TextBox height="100%" text="Department" width="100%"
+							ui:field="departmentHeader" styleName="{style.panel-greydark}"
+							readOnly="true" />
+					</g:layer>
+
+					<g:layer left="2.0pct" top="28.0pct"
+						height="22.0pct" right="1.0pct">
+						<g:TextBox width="100%" height="100%" ui:field="courseNameField" />
+					</g:layer>
+					<g:layer left="2.0pct" top="74.0pct" bottom="2.0pct" right="75.0pct">
+						<g:TextBox height="100%" width="100%" ui:field="courseNumberField" />
+					</g:layer>
+					<g:layer left="25.0pct" top="74.0pct" bottom="2.0pct" right="48.0pct">
+						<g:TextBox height="100%" width="100%" ui:field="typeField" />
+					</g:layer>
+					<g:layer left="52.5pct" top="78.0pct" right="25.0pct" bottom="5.0pct">
+						<g:ListBox height="100%" width="100%" ui:field="levelList">
+							<g:item>
+								Undergraduate
+							</g:item>
+							<g:item>
+								Graduate
+							</g:item>
+						</g:ListBox>
+					</g:layer>
+					<g:layer left="75.0pct" top="74.0pct" right="1.0pct" bottom="2.0pct">
+						<g:TextBox height="100%" width="100%" ui:field="departmentField" />
+					</g:layer>
+					<g:layer left="110.0pct" width="0pct" top="110pct" height="0pct">
+						<g:IntegerBox height="0%" width="0%" ui:field="courseIdField"
+							value="0" />
+					</g:layer>
+				</g:LayoutPanel>
+			</g:north>
+
+			<g:south size="15.0">
+				<g:LayoutPanel width="100%" height="100%"
+					styleName="{style.layoutPanelB}" ui:field="saveDeletePanel">
+					<g:layer left="15%" width="30%" top="15%" height="70%">
+						<g:Button width="100%" height="100%" text="Save Changes"
+							styleName="{style.greenButton}" ui:field="saveCourseButton" />
+					</g:layer>
+					<g:layer left="55%" width="30%" top="15%" height="70%">
+						<g:Button width="100%" height="100%" text="Delete Course"
+							styleName="{style.redButton}" ui:field="deleteCourseButton" />
+					</g:layer>
+
+				</g:LayoutPanel>
+			</g:south>
+
+			<g:center>
+				<g:DockLayoutPanel unit="PCT" width="100%" height="100%"
+					styleName="{style.layoutPanel}">
+					<g:east size="45">
+						<g:LayoutPanel width="100%" height="100%"
+							styleName="{style.layoutPanel}" ui:field="instancePanel">
+							<g:layer left="5%" top="5%" bottom="5.3pct" right="45.0pct">
+								<g:ListBox visibleItemCount="8" styleName="dialogVPanel"
+									ui:field="instanceList">
+								</g:ListBox>
+							</g:layer>
+							<g:layer bottom="55.0pct" right="5.0pct" left="56.0pct"
+								top="16.7pct">
+								<g:Button text="Create Instance" styleName="{style.greenButton}"
+									ui:field="createInstanceButton" width="100%" height="100%" />
+							</g:layer>
+							<g:layer height="28.0pct" right="5.0pct"
+								bottom="16.6pct" left="56.0pct">
+								<g:Button text="Edit Instance" styleName="{style.orangeButton}"
+									ui:field="editInstanceButton" width="100%" height="100%" />
+							</g:layer>
+
+						</g:LayoutPanel>
+					</g:east>
+					<g:center>
+						<g:LayoutPanel ui:field="descriptionPanel" width="100%"
+							height="100%" styleName="{style.layoutPanel}">
+							<g:layer left="2.0pct" top="0.0pct" right="2.0pct"
+								bottom="85.0pct">
+								<g:TextBox text="Course Description" alignment="CENTER"
+									styleName="{style.panel-greydark}" ui:field="courseDescHeader"
+									readOnly="true" width="100%" height="100%" />
+							</g:layer>
+
+							<g:layer left="2.0pct"
+								top="15%" bottom="-4.7pct" right="2.0pct">
+								<g:TextArea ui:field="courseDescField" width="100%"
+									height="100%" />
+							</g:layer>
+
+						</g:LayoutPanel>
+					</g:center>
+				</g:DockLayoutPanel>
+			</g:center>
+
+		</g:DockLayoutPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	
+	<ui:style>
+
+			.login-button
+	{
+		font-family:Times New Roman;
+		font-size:14px;
+		float:right;
+		margin-top:10px;
+		margin-right:20px;
+		margin-bottom:4px;
+	}
+
+			.layoutPanel
+	{
+		background-color:#DCDCDC;
+	}
+
+
+	</ui:style>
+	<g:HTMLPanel ui:field="rootPanel" width="100%" height="100%">
+		<g:TextBox text="Account Information" width="100%" alignment="CENTER" textAlignment="ALIGN_CENTER" ui:field="AccountInfoPgTitle" height="10%" readOnly="true"/>
+		<g:LayoutPanel width="100%" height="80%" ui:field="AccountInfoBaseLayoutPanel">
+			<g:layer>
+				<g:HTMLPanel width="100%" height="100%" ui:field="FlexPanel">
+			<g:FlexTable width="100%" borderWidth="2" height="100%" ui:field="AccountInfoFlexTable" cellPadding="5" cellSpacing="5"/>
+		</g:HTMLPanel>
+			</g:layer>
+		</g:LayoutPanel>
+		<g:Button width="100%" height="10%" ui:field="submitChangesButton" text="Submit Changes"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.panel-grey {
+		background: #DCDCDC;
+		}
+
+		.panel-greydark {
+		background: #989b9b;
+		}
+
+		.button-green {
+		color: white;
+		font-size: 12px;
+		font-family: Times New Roman;
+		background: #06c94a;
+		}
+
+	</ui:style>
+	<g:HTMLPanel width="100%" height="100%" ui:field="rootPanel">
+		<g:LayoutPanel width="100%" height="100%" addStyleNames="{style.panel-grey}">
+			<g:layer left="40.0pct" top="3.0pct" right="40.0pct" bottom="87.7pct">
+				<g:TextBox text="Create User" width="100%" height="100%"
+					textAlignment="ALIGN_CENTER" readOnly="true" addStyleNames="{style.panel-grey}" alignment="CENTER" styleName="h1" />
+			</g:layer>
+			<g:layer left="3.0pct" top="17.0pct" right="3.0pct" bottom="3.0pct">
+				<g:LayoutPanel width="100%" height="100%">
+					<g:layer left="8.3pct" top="9.2pct" right="55.0pct" bottom="76.7pct">
+						<g:TextBox text="First Name" ui:field="firstNameField" width="100%" height="100%" />
+					</g:layer>
+					<g:layer left="55.0pct" top="9.2pct" right="8.3pct" bottom="76.7pct">
+						<g:TextBox text="Last Name" ui:field="lastNameField" width="100%" height="100%" />
+					</g:layer>
+					<g:layer left="8.3pct" top="30.0pct" right="8.3pct" bottom="55.0pct">
+						<g:TextBox text="WPI E-mail" ui:field="emailField" width="100%" height="100%" />
+					</g:layer>
+					<g:layer left="8.3pct" top="53.0pct" right="60.0pct"
+						bottom="40.0pct">
+						<g:CheckBox text="Administrator" width="100%" height="100%" ui:field="adminCheckBox" />
+					</g:layer>
+					<g:layer left="55.0pct" top="53.0pct" right="8.3pct"
+						bottom="33.0pct">
+						<g:DoubleBox ui:field="requirementField" text="Teaching Requirement" width="100%" height="100%" />
+					</g:layer>
+					<g:layer left="40.0pct" top="78.8pct" right="40.0pct"
+						bottom="8.8pct">
+						<g:Button addStyleNames="{style.button-green}" ui:field="submitButton" width="100%" height="100%">Submit</g:Button>
+					</g:layer>
+				</g:LayoutPanel>
+			</g:layer>
+		</g:LayoutPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
